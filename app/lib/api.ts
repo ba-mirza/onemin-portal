@@ -32,9 +32,15 @@ const request = {
 };
 
 const article = {
-  list: async () => {},
-  byId: async (id: number) => {},
-  listByCategory: async (categoryId: number) => {},
+  findMany: async () => {},
+  findBy: async (id: number) => {},
+  findManyWith: async ({
+    where: { categoryId },
+    limit = 10,
+  }: {
+    where: { categoryId: number };
+    limit?: number;
+  }) => {},
 };
 
 export { article };
